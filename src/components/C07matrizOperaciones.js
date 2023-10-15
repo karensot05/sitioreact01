@@ -16,7 +16,7 @@ const MatrizOperaciones = () => {
     const [texto, setTexto] = useState(["Viernes","Sabado","Domingo"]);
     const agregarTexto = () => {
         //setTexto(texto);
-        setDiaz([...dias, ...texto]);
+        setDias([...dias, ...texto]);
     }
     return (
         <Fragment>

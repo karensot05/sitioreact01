@@ -19,10 +19,10 @@ const Contador = () => {
     //Se puede usar <Fragment> tambien <div>
     //En el evento onClick se llama  a la funcion flecha entre llaves
     return(
-        <Fargment>
+        <Fragment>
             <h3>Mi primer componente {numero}</h3>
             <button onClick={aumentar}>Aumentar</button>
-            </Fargment>
+            </Fragment>
     );
 }
 
