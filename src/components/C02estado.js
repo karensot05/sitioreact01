@@ -1,4 +1,4 @@
-import React, {useState, Frafment} from 'react';
+import React, {useState, Fragment} from 'react';
 
 const Contador = () => {
 
