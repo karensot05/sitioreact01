@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { db } from "../firebase/firebase";
 import { addDoc, collection } from 'firebase/firestore';
 
-const AppForm = () => {
+const AppForm = (props) => {
   const camposRegistro = {nombre:"", edad:"", genero:""}
   const [objeto, setObjeto] = useState(camposRegistro);
   const manejarEnvio = (e) => {
@@ -14,6 +14,7 @@ const AppForm = () => {
       }else{
         console.log("Actualizar en BD");
       }
+      
     } catch (error){
       console.error();
     }
@@ -36,8 +37,12 @@ const AppForm = () => {
                  <input onChange={manejarCambiosEntrada} value={objeto.genero} name='genero' type='text'placeholder='Genero...' /><br/>
                  <button>Guardar</button><br/>
                  <i class="large material-icons">insert_chart</i>
-                 </form>
+                 <button>
+          { props.idActual===""? "Guardar": "Actualizar" }
+        </button>
+      </form>
     </div>
+
   )
   
 }
