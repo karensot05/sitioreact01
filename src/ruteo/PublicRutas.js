@@ -39,7 +39,7 @@ const PublicRutas = () => {
         <div id="menu">
           <ul>
             <li><Link to="/home">Home</Link> </li>
-            <li><Link to="/contacto">Home</Link> </li>
+            <li><Link to="/contacto">Contacto</Link> </li>
          
             
           </ul>
