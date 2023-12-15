@@ -5,6 +5,7 @@ const Deportes = () => {
     <div id="sis" style={{ background:"#DDCDEF ", }}>
       <h1>Deportes</h1>
       
+      
       <p>Futbol</p>
       <p>Basquet</p>
       <p>Voley</p>

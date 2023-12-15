@@ -5,6 +5,7 @@ const Carreras = () => {
     <div id="sis" style={{ background:"#DDCDEF ", }}>
       <h1>Carreras</h1>
      
+     
       <p>Informatica</p>
       <p>Computacion</p>
       <p>Metalurgia</p>

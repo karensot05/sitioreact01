@@ -5,6 +5,7 @@ const Egresados = () => {
     <div id="sis" style={{ background:"#DDCDEF ", }}>
       <h1>Egresados</h1>
       
+      
       <p>Manuel</p>
       <p>Marcelo</p>
       <p>Mariela</p>

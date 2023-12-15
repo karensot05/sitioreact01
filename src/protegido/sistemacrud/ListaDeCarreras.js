@@ -5,6 +5,7 @@ const ListaDeCarreras = () => {
     <div id="sis">
       <h1>ListaDeCarreras</h1>
       Lista de carreras...
+      
     </div>
   )
 }
