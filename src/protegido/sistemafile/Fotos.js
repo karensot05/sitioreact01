@@ -1,10 +1,13 @@
 import React from 'react'
 
+
 const Fotos = () => {
   return (
-    <div id='file'>
-      <h1>Fotos</h1>
-      Página para fotos...
+    <div id='file' style={{ background:"#F2F5BF  ", }}>
+      <h1>FOTOS</h1>
+      Bienvenido a la pagina para las FOTOS 
+      
+      
     </div>
   )
 }

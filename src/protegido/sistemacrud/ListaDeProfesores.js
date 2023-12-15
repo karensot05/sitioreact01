@@ -4,7 +4,15 @@ const ListaDeProfesores = () => {
   return (
     <div id="sis">
       <h1>ListaDeProfesores</h1>
-      Lisat de profesores...
+     
+      
+  
+      <p>Luis Miguel...</p>
+      <p>Gonzalo Neyra...</p>
+      <p>Angel Cueva...</p>
+      <p>Miguel Marquina...</p>
+      <p>Gerson Aragon...</p>
+      
     </div>
   )
 }
