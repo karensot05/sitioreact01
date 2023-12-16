@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../conexion/firebase";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import { useAuth } from '../../ruteo/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 import { getAuth, signOut } from 'firebase/auth';
+
 
 
 
@@ -102,27 +103,49 @@ const AppForm = (props) => {
   }
   
   return (
-    <div style={{ background:"#DDCDEF ", padding:"10px" }}>
-      <form onSubmit={handleSubmit} >
-        <button onClick={handleSignOut}> Cerrar aplicación</button>
+    <div>
+      <form onSubmit={handleSubmit} className='card card-body'>
+      <div className='col-md-12'>
+          <button onClick={ handleSignOut} className='input-group-text bd-light' >
+            Cerrar aplicación
+          </button>
+        </div>
 
-        <h2>AppForm</h2>
+        <button className='btn btn-primary btn-block'>
+          Registrar Estudiantes (AppForm.js)
+        </button>
+
         <ToastContainer/>
 
-        <input onChange={handleStatusChange} value={objeto.nombre}
-          name='nombre' type='text' placeholder='Nombres' /> <br/>
-      
-        <input onChange={handleStatusChange} value={objeto.edad}
-          name='edad' type='text' placeholder='Edad' /> <br/>
+        <div className='form-group input-group'>
+          <div className='input-group-text bd-light'>
+            <i className='material-icons'>group_add</i>
+          </div>
+          <input className='form-control float-start' type='text' placeholder='Nombres...'  
+            onChange={handleStatusChange} value={objeto.nombre} name='nombre' />
+        </div>
+        <div className='form-group input-group'>
+          <div className='input-group-text bd-light'>
+            <i className='material-icons'>star_half</i>
+          </div>
+          <input className='form-control float-start' type='text' placeholder='Edad...'  
+            onChange={handleStatusChange} value={objeto.edad} name='edad' />
+        </div>
         
-        <select onChange={handleStatusChange} value={objeto.genero} name='genero'>
-          <option value="">Seleccione género</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
-        </select> <br/>
+        <div className='form-group input-group'>
+          <div className='input-group-text bd-light'>
+            <i className='material-icons'>insert_link</i>
+          </div>
+          <select className='form-control float-start' name='genero'
+            onChange={handleStatusChange} value={objeto.genero} >
+            <option value="">Seleccione...</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+        </div>
         
-        <button>
-          {props.idActual=="" ? "Guardar": "Actualizar" }
+        <button className='btn btn-primary btn-block'>
+          {props.idActual=='' ? "Guardar": "Actualizar"}
         </button>
         <br></br>
         <i class="large material-icons">insert_chart</i>

@@ -106,7 +106,7 @@ export default BarraRutasProtected;
 
 function MarcoParaSistemaCRUD() {
     return (
-      <div style={{background:"#00FFD1 ", padding:"10px"}}>
+      <div style={{background:"#003333", padding:"10px"}}>
         <h1>Marco sistema CRUD</h1>
         < Outlet /> {/* Aquí se mostrarán las rutas secundarias */}
       </div>

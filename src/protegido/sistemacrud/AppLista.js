@@ -36,23 +36,50 @@ const AppLista = (props) => {
   }
   
   return (
-    <div style={{background:"#F2B5D2 ", padding:"10px"}}>
-      <h1>AppLista</h1>
-      <ToastContainer/>
-      <AppForm {...{idActual, setIdActual}} />  {/* Envios de variables */}
-      <h3>Lista de clientes</h3>
-      {
-        docBD.map((row, index) =>               // Extraer registro e index
-          <p key={row.id}>                      {/* Asignar key a <p> */}
-            No. {index + 1}. {row.nombre}       {/* Imprimir Numero y nombre */}
-            -------
-            <span onClick={() => fnDelete(row.id)}>X</span>
-            -------
-            <span onClick={() => setIdActual(row.id)}>A</span>
-          </p> 
-          
-        )
-      }
+    
+    <div className='container text-center'>
+      <div className='card bs-secondary p-3 mt-3'> 
+
+        <ToastContainer />
+
+        <div className='col-md-12 p-2'>
+          <div className='card mb-1'>
+            <AppForm {...{idActual, setIdActual}} />
+          </div>
+        </div>
+
+        <div className='col-md-12 p-2'>
+          <div className='card mb-1'>
+            <h2>Lista de clientes (AppLista.js)</h2>
+          </div>
+        </div>
+
+        <div className='col-md-12 p-2'>
+          {
+            docBD.map((row, index) =>  
+              <div className='card mb-1' key={row.id} >
+                <div className='card-body'>
+                  <div className='d-flex justify-content-between'>
+                    <h4>No. {index+1}. {row.nombre}</h4>
+                    <div>
+                      <i className='material-icons text-danger' 
+                        onClick={() => fnDelete(row.id)}>close</i>
+                        ...
+                        <i className='material-icons text-warning' 
+                          onClick={() => setIdActual(row.id)}>create</i>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content">
+
+                    <span>Edad: {row.edad} </span> ...
+                    <a href='#'>Genero: {row.genero} </a>
+                  </div>
+                </div>
+              </div>
+            )
+         }
+        </div>
+      </div>
     </div>
   )
 }
